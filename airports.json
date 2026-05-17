@@ -1,0 +1,12 @@
+[
+  {"code": "NGO", "name": "中部国際空港"},
+  {"code": "HNL", "name": "ダニエル・K・イノウエ国際空港"},
+  {"code": "KOA", "name": "エリソン・オニヅカ・コナ国際空港"},
+  {"code": "CNS", "name": "ケアンズ国際空港"},
+  {"code": "SYD", "name": "シドニー国際空港"},
+  {"code": "BNE", "name": "ブリスベン空港"},
+  {"code": "MEL", "name": "メルボルン空港"},
+  {"code": "DXB", "name": "ドバイ国際空港"},
+  {"code": "DOH", "name": "ハマド国際空港"},
+  {"code": "AUH", "name": "ザイード国際空港"}
+]
