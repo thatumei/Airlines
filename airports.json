@@ -1,0 +1,16 @@
+[
+  {"code": "NGO", "name": "中部国際空港"},
+  {"code": "TPE", "name": "台湾桃園国際空港"},
+  {"code": "KHH", "name": "高雄国際空港"},
+  {"code": "HKG", "name": "香港国際空港"},
+  {"code": "MFM", "name": "マカオ国際空港"},
+  {"code": "PVG", "name": "上海浦東国際空港"},
+  {"code": "PEK", "name": "北京首都国際空港"},
+  {"code": "PKX", "name": "北京大興国際空港"},
+  {"code": "CAN", "name": "広州白雲国際空港"},
+  {"code": "DLC", "name": "大連周水子国際空港"},
+  {"code": "TAO", "name": "青島流亭国際空港"},
+  {"code": "SHE", "name": "瀋陽桃仙国際空港"},
+  {"code": "HGH", "name": "杭州蕭山国際空港"},
+  {"code": "NKG", "name": "南京禄口国際空港"}
+]
