@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>航空券予約 | パイナップル航空</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+            <h1 class="logo">
+                <span class="material-icons">flight_takeoff</span>
+                <span>Pineapple Airlines</span>
+            </h1>
+            <nav class="header-nav">
+                <a href="#" class="active">航空券予約</a>
+                <a href="#">運行状況</a>
+                <a href="#">予約確認</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="booking-container">
+            <h2><span class="material-icons">search</span> 航空券空席検索</h2>
+            <form id="bookingForm" action="reserve.php" method="POST">
+                
+                <div class="form-group">
+                    <label>旅程タイプ</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="tripType" value="round" checked> 往復</label>
+                        <label><input type="radio" name="tripType" value="one-way"> 片道</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="departure">
+                            <span class="material-icons size-sm">flight_takeoff</span> 出発地
+                        </label>
+                        <select id="departure" name="departure" required>
+                            <option value="東京/羽田">東京 (羽田)</option>
+                            <option value="大阪/関空">大阪 (関空)</option>
+                            <option value="福岡">福岡</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">
+                            <span class="material-icons size-sm">flight_land</span> 目的地
+                        </label>
+                        <select id="destination" name="destination" required>
+                            <option value="札幌">札幌 (新千歳)</option>
+                            <option value="沖縄">沖縄 (那覇)</option>
+                            <option value="東京/成田">東京 (成田)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="depDate">
+                            <span class="material-icons size-sm">calendar_month</span> 出発日
+                        </label>
+                        <input type="date" id="depDate" name="depDate" required>
+                    </div>
+                    <!-- 往復・片道で切り替わる要素 -->
+                    <div class="form-group" id="returnDateGroup">
+                        <label for="retDate">
+                            <span class="material-icons size-sm">calendar_month</span> 帰着日
+                        </label>
+                        <input type="date" id="retDate" name="retDate" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="seatClass">
+                        <span class="material-icons size-sm">airline_seat_recline_normal</span> 座席クラス
+                    </label>
+                    <select name="seatClass" id="seatClass">
+                        <option value="エコノミー">エコノミー</option>
+                        <option value="ビジネス">ビジネス</option>
+                        <option value="ファースト">ファースト</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <span class="material-icons">search</span> 検索する
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p class="copyright">&copy; 2026 Pineapple Airlines. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
