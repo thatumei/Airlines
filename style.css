@@ -1,0 +1,214 @@
+/* ==========================================
+   カラー・共通変数の定義（ここを変更すると一括で変わります）
+   ========================================== */
+:root {
+    --primary-color: #C8102E;       /* メインカラー（ヘッダー、見出し、ボタン等） */
+    --primary-hover: #C8102E;       /* メインカラーのホバー時 */
+    --accent-color: #ff9900;        /* アクセントカラー（検索ボタン等） */
+    --accent-hover: #e68a00;        /* アクセントカラーのホバー時 */
+    --bg-color: #f4f7f6;            /* 全体の背景色 */
+    --text-color: #333333;          /* 通常の文字色 */
+}
+
+/* 全体設定 */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 動的制御用のユーティリティクラス */
+.hidden {
+    display: none !important;
+}
+
+/* アイコン共通調整 */
+.material-icons {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.material-icons.size-sm {
+    font-size: 18px;
+}
+
+/* ヘッダー */
+.site-header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+.header-nav a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.header-nav a:hover, .header-nav a.active {
+    color: #ffffff;
+}
+
+/* メインコンテンツエリア */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* カード共通（フォーム・結果画面） */
+.booking-container, .result-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 500px;
+}
+.result-card {
+    max-width: 600px;
+}
+
+h2, h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+}
+
+/* フォーム要素 */
+.form-group {
+    margin-bottom: 20px;
+}
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+.form-row .form-group {
+    flex: 1;
+}
+label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #444;
+    font-size: 14px;
+}
+select, input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: var(--text-color);
+}
+.radio-group {
+    display: flex;
+    gap: 20px;
+    padding: 5px 0;
+}
+.radio-group label {
+    font-weight: normal;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* ボタン（アクセントカラー） */
+button.btn-submit {
+    width: 100%;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button.btn-submit:hover {
+    background-color: var(--accent-hover);
+}
+
+/* ボタン（メインカラー・戻るボタン等） */
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.btn-back:hover {
+    background: var(--primary-hover);
+}
+
+/* 結果表示テーブル */
+.success-title {
+    color: #2d862d;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    border-bottom: 2px solid #2d862d;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+th {
+    background-color: #f8f9fa;
+    color: var(--text-color);
+    width: 30%;
+}
+
+/* フッター */
+.site-footer {
+    background-color: #222;
+    color: #aaa;
+    font-size: 13px;
+    padding: 20px 0;
+    text-align: center;
+}
+.copyright {
+    margin: 0;
+    font-size: 11px;
+}
